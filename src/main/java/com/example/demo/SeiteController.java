@@ -1,11 +1,11 @@
 package com.example.demo;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
 import java.util.List;
 
-@Controller
+@RestController
 public class SeiteController {
     @GetMapping("/seite")
         public List<Seite> getProfile() {
