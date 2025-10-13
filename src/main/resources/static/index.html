@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Freundebuch – Übersicht</title>
+    <style>
+        :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+        body { margin: 0; background:#f6f7fb; color:#1a1a1a; }
+        header { background:#111827; color:#fff; padding:20px; }
+        header h1 { margin:0; font-size:20px; }
+        main { max-width: 900px; margin: 24px auto; padding: 0 16px; }
+        .card { background:#fff; border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,.06); padding:20px; }
+        table { width:100%; border-collapse: collapse; margin-top:12px; }
+        th, td { text-align:left; padding:12px 10px; border-bottom:1px solid #e5e7eb; }
+        th { background:#f3f4f6; font-weight:700; }
+        .muted { color:#6b7280; font-size:12px; margin-top:8px; }
+    </style>
+</head>
+<body>
+<header><h1>Freundebuch – Seiten</h1></header>
+<main>
+    <div class="card">
+        <div id="content">Lade Daten…</div>
+        <div class="muted">Quelle: <code>GET /seite</code></div>
+    </div>
+</main>
+<script>
+    function fmtDate(iso) {
+      if (!iso) return '';
+      const [y,m,d] = iso.split('-');
+      return `${d}.${m}.${y}`;
+    }
+    fetch('/seite')
+      .then(r => r.json())
+      .then(list => {
+        if (!Array.isArray(list)) list = [list];
+        const rows = list.map(p => `
+          <tr>
+            <td>${p.name ?? ''}</td>
+            <td>${p.age ?? ''}</td>
+            <td>${fmtDate(p.geburtsdatum)}</td>
+            <td>${p.favoriteColor ?? ''}</td>
+            <td>${p.hobby ?? ''}</td>
+            <td>${p.favoriteFood ?? ''}</td>
+            <td>${p.dreamJob ?? ''}</td>
+          </tr>`).join('');
+        document.getElementById('content').innerHTML = `
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th><th>Alter</th><th>Geburtsdatum</th>
+                <th>Lieblingsfarbe</th><th>Hobby</th><th>Lieblingsessen</th><th>Traumberuf</th>
+              </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>`;
+      })
+      .catch(e => document.getElementById('content').textContent = 'Fehler: ' + e.message);
+</script>
+</body>
+</html>
