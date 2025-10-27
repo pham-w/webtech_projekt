@@ -6,18 +6,18 @@ public class Seite {
         private String name;
         private int age;
         private LocalDate geburtsdatum;
-        private String favoriteColor;
+        private String favColor;
         private String hobby;
-        private String favoriteFood;
+        private String favFood;
         private String dreamJob;
 
-        public Seite(String name, int age, LocalDate geburtsdatum, String favoriteColor, String hobby, String favoriteFood, String dreamJob) {
+        public Seite(String name, int age, LocalDate geburtsdatum, String favColor, String hobby, String favFood, String dreamJob) {
             this.name = name;
             this.age = age;
             this.geburtsdatum = geburtsdatum;
-            this.favoriteColor = favoriteColor;
+            this.favColor = favColor;
             this.hobby = hobby;
-            this.favoriteFood = favoriteFood;
+            this.favFood = favFood;
             this.dreamJob = dreamJob;
         }
 
@@ -44,12 +44,12 @@ public class Seite {
         public void setGeburtsdatum(LocalDate geburtsdatum) {
             this.geburtsdatum = geburtsdatum;
         }
-        public String getFavoriteColor() {
-            return favoriteColor;
+        public String getFavColor() {
+            return favColor;
         }
 
-        public void setFavoriteColor(String favoriteColor) {
-            this.favoriteColor = favoriteColor;
+        public void setFavColor(String favColor) {
+            this.favColor = favColor;
         }
 
         public String getHobby() {
@@ -60,12 +60,12 @@ public class Seite {
             this.hobby = hobby;
         }
 
-        public String getFavoriteFood() {
-            return favoriteFood;
+        public String getFavFood() {
+            return favFood;
         }
 
-        public void setFavoriteFood(String favoriteFood) {
-            this.favoriteFood = favoriteFood;
+        public void setFavFood(String favFood) {
+            this.favFood = favFood;
         }
 
         public String getDreamJob() {
@@ -79,9 +79,9 @@ public class Seite {
     public String getProfile() {
         return "Name: " + name + "\n" +
                 "Alter: " + age + "\n" +
-                "Lieblingsfarbe: " + favoriteColor + "\n" +
+                "Lieblingsfarbe: " + favColor + "\n" +
                 "Hobby: " + hobby + "\n" +
-                "Lieblingsessen: " + favoriteFood + "\n" +
+                "Lieblingsessen: " + favFood + "\n" +
                 "Traumberuf: " + dreamJob;
 }
 
