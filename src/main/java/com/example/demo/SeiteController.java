@@ -14,8 +14,8 @@ public class SeiteController {
     @GetMapping("/seite")
     public List<Seite> getProfile() {
         return List.of(
-                new Seite("Willhelm", 90, LocalDate.of(2000, 10, 1),
-                        "Blau", "backen", "pizza", "astronaut")
+                new Seite("Willhelm", 45, LocalDate.of(2000, 10, 1),
+                        "Blau", "Backen", "Pizza", "Astronaut")
         );
     }
 }
