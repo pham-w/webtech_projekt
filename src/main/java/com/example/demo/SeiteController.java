@@ -1,8 +1,7 @@
 package com.example.demo;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -11,11 +10,24 @@ import java.util.List;
 @RestController
 public class SeiteController {
 
-    @GetMapping("/seite")
-    public List<Seite> getProfile() {
-        return List.of(
-                new Seite("Willhelm", 45, LocalDate.of(2000, 10, 1),
-                        "Blau", "Backen", "Pizza", "Astronaut")
-        );
+    @Autowired
+    SeiteService service;
+
+    @PostMapping("/seite")
+    public Seite fillSeite(@RequestBody Seite seite) {
+        return service.save(seite);
     }
+
+    @GetMapping("/seite/{id}")
+    public Seite getSeite(@PathVariable String id) {
+        Long seiteId = Long.parseLong(id);
+        return service.get(seiteId);
+    }
+
+    //public List<Seite> getProfile() {
+        //return List.of(
+                //new Seite("Willhelm", 45, LocalDate.of(2000, 10, 1),
+                        //"Blau", "Backen", "Pizza", "Astronaut")
+        //);
+    //}
 }

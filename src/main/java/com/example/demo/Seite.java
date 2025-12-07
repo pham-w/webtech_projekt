@@ -20,6 +20,9 @@ public class Seite {
     private String favFood;
     private String dreamJob;
 
+    // leerer Konstruktor für Hibernate
+    public Seite() {}
+
     public Seite(String name, int age, LocalDate geburtsdatum,
                  String favColor, String hobby, String favFood, String dreamJob) {
         this.name = name;
@@ -31,7 +34,7 @@ public class Seite {
         this.dreamJob = dreamJob;
     }
 
-    public Seite() {}
+
 
     public Long getId() {return id;}
     public void setId(Long id) {this.id = id;}

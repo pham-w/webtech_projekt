@@ -7,5 +7,13 @@ import org.springframework.stereotype.Service;
 public class SeiteService {
 
     @Autowired
-    private SeiteRepository repo;
+    SeiteRepository repo;
+
+    public Seite save(Seite seite) {
+        return repo.save(seite);
+    }
+
+    public Seite get(Long id) {
+        return repo.findById(id).orElseThrow(RuntimeException::new);
+    }
 }
