@@ -13,11 +13,13 @@ public class SeiteController {
     @Autowired
     SeiteService service;
 
+    @CrossOrigin
     @PostMapping("/seite")
     public Seite fillSeite(@RequestBody Seite seite) {
         return service.save(seite);
     }
 
+    @CrossOrigin
     @GetMapping("/seite/{id}")
     public Seite getSeite(@PathVariable String id) {
         Long seiteId = Long.parseLong(id);
