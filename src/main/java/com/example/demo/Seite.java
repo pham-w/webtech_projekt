@@ -25,6 +25,7 @@ public class Seite {
 
     public Seite(String name, int age, LocalDate geburtsdatum,
                  String favColor, String hobby, String favFood, String dreamJob) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.geburtsdatum = geburtsdatum;
