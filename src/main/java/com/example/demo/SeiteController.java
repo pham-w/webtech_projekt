@@ -10,21 +10,19 @@ import java.time.LocalDate;
 public class SeiteController {
 
     @Autowired
-    SeiteService service;
+    private SeiteService service;
 
-    @CrossOrigin
     @PostMapping("/seite")
     public Seite fillSeite(@RequestBody Seite seite) {
         return service.save(seite);
     }
 
-    @CrossOrigin
     @GetMapping("/seite/{id}")
-    public Seite getSeite(@PathVariable String id) {
-        Long seiteId = Long.parseLong(id);
-        return service.get(seiteId);
+    public Seite getSeite(@PathVariable Long id) {
+        return service.get(id);
     }
 
+    // Ein einziges Test-Endpoint reicht:
     @GetMapping("/test")
     public Seite createTestSeite() {
         Seite s = new Seite(
@@ -38,5 +36,4 @@ public class SeiteController {
         );
         return service.save(s);
     }
-
 }
