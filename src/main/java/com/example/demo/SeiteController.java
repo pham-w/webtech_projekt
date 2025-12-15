@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @CrossOrigin(origins = "https://frontend-freundebuch.onrender.com")
 @RestController
@@ -26,10 +25,18 @@ public class SeiteController {
         return service.get(seiteId);
     }
 
-    //public List<Seite> getProfile() {
-        //return List.of(
-                //new Seite("Willhelm", 45, LocalDate.of(2000, 10, 1),
-                        //"Blau", "Backen", "Pizza", "Astronaut")
-        //);
-    //}
+    @GetMapping("/test")
+    public Seite createTestSeite() {
+        Seite s = new Seite(
+                "Angi",
+                19,
+                LocalDate.of(2005, 1, 1),
+                "Blau",
+                "Karate",
+                "Pizza",
+                "Dev"
+        );
+        return service.save(s);
+    }
+
 }
