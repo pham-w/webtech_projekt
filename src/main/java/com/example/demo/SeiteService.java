@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
+
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Service
@@ -19,5 +21,9 @@ public class SeiteService {
     public Seite get(Long id) {
         return repo.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Seite not found: " + id));
+    }
+
+    public List<Seite> getAll() {
+        return (List<Seite>) repo.findAll();
     }
 }

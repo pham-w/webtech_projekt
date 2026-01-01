@@ -2,10 +2,11 @@ package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+import java.util.List;
 import java.time.LocalDate;
 
-@CrossOrigin(origins = "https://frontend-freundebuch.onrender.com")
+@CrossOrigin(origins = {"http://localhost:5173",
+        "https://frontend-freundebuch.onrender.com"})
 @RestController
 public class SeiteController {
 
@@ -15,6 +16,11 @@ public class SeiteController {
     @PostMapping("/seite")
     public Seite fillSeite(@RequestBody Seite seite) {
         return service.save(seite);
+    }
+
+    @GetMapping("/seite")
+    public List<Seite> getAllSeiten() {
+        return service.getAll();
     }
 
     @GetMapping("/seite/{id}")
