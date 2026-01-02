@@ -5,8 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.time.LocalDate;
 
-@CrossOrigin(origins = {"http://localhost:5173",
-        "https://frontend-freundebuch.onrender.com"})
+@CrossOrigin(origins = "https://frontend-freundebuch.onrender.com")
 @RestController
 public class SeiteController {
 
