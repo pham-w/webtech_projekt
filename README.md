@@ -30,3 +30,6 @@ authorisierung : man kann nur seinen eigenen eintrag bearbeiten, nur der host/ m
 jeder kann erstellen, nach einträgen filtern, geburtstage im kalender anzeigen lassen und fav markieren
 
 authentifizierung: registrierung und login
+
+Coole zuätzliche Funtionen:
+- crusor effect
