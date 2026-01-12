@@ -20,6 +20,8 @@ geplante/Idee für Use Cases:
 - Freundebuch-Einträge filtern nach bestimmten Kategorien und durchsuchen
 - kommende Gebursttage im Kalender anzeigen lassen (Google Calendar Api o.ä.)
 - Favoriten markieren
+- light/ dark mode, eintagsdesign ändern (theming)
+- Einträge löschen (nur für den host/main user)
 
 Ideen für Funktionen für Zusatzpunkte:
 - Input Validierung (Geburtstag und Alter passen zsm ect.)
