@@ -16,22 +16,25 @@ Präsentation: 19.01
 
 geplante/Idee für Use Cases:
 - Benutzerregistrierung und -anmeldung -> über okta siehe frontend von wider oder über hashcode/hashmap o.ä
-- eintrag erstellen und bearbeiten 
-- Freundebuch-Einträge filtern nach bestimmten Kategorien und durchsuchen
-- kommende Gebursttage im Kalender anzeigen lassen (Google Calendar Api o.ä.)
-- Favoriten markieren
-- light/ dark mode, eintagsdesign ändern (theming)
+- # Eintrag erstellen 
+- Eintrag bearbeiten 
+- Freundebuch-Einträge filtern nach bestimmten Kategorien  
+- nach bestimmten Freunden suchen über Namen
+- Favoriten markieren + in einer eigenen Ansicht anzeigen lassen
+- light/ dark mode 
+- Eintragsdesign ändern (theming)
 - Einträge löschen (nur für den host/main user)
+- ( kommende Gebursttage im Kalender anzeigen lassen (Google Calendar Api o.ä.))
 
 Ideen für Funktionen für Zusatzpunkte:
 - Input Validierung (Geburtstag und Alter passen zsm ect.)
 - Multi User (idee zur authorisierung: nur ein main user/ host kann einträge löschen; user können nur ihre eigenen einträge bearbeiten)
 - externe Api (z.B Kalender Api für Geburtstage)
-
-authorisierung : man kann nur seinen eigenen eintrag bearbeiten, nur der host/ main user kann einträge löschen, 
-jeder kann erstellen, nach einträgen filtern, geburtstage im kalender anzeigen lassen und fav markieren
-
-authentifizierung: registrierung und login
-
-Coole zuätzliche Funtionen:
+- 
+  Coole zuätzliche Funktionen:
 - crusor effect
+
+# authorisierung : man kann nur seinen eigenen eintrag bearbeiten, nur der host/ main user kann einträge löschen, 
+# jeder kann erstellen, nach einträgen filtern, geburtstage im kalender anzeigen lassen und fav markieren
+# authentifizierung: registrierung und login
+
