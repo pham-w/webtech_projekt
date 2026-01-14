@@ -26,4 +26,18 @@ public class SeiteService {
     public List<Seite> getAll() {
         return (List<Seite>) repo.findAll();
     }
+
+    public Seite update(Long id, Seite updated) {
+        Seite existing = repo.findById(id).orElseThrow(RuntimeException::new);
+
+        existing.setName(updated.getName());
+        existing.setAge(updated.getAge());
+        existing.setGeburtsdatum(updated.getGeburtsdatum());
+        existing.setFavColor(updated.getFavColor());
+        existing.setHobby(updated.getHobby());
+        existing.setFavFood(updated.getFavFood());
+        existing.setDreamJob(updated.getDreamJob());
+
+        return repo.save(existing);
+    }
 }

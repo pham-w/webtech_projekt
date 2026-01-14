@@ -27,6 +27,11 @@ public class SeiteController {
         return service.get(id);
     }
 
+    @PutMapping("/seite/{id}")
+    public Seite updateSeite(@PathVariable Long id, @RequestBody Seite seite) {
+        return service.update(id, seite);
+    }
+
     // Ein einziges Test-Endpoint reicht:
     @GetMapping("/test")
     public Seite createTestSeite() {
