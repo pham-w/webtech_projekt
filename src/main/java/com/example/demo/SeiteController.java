@@ -5,7 +5,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.time.LocalDate;
 
-@CrossOrigin(origins = "https://frontend-freundebuch.onrender.com")
+@CrossOrigin(
+        origins = "https://frontend-freundebuch.onrender.com",
+        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS},
+        allowedHeaders = "*"
+)
 @RestController
 public class SeiteController {
 
