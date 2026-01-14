@@ -40,4 +40,7 @@ public class SeiteService {
 
         return repo.save(existing);
     }
+    public void delete(Long id) {
+        repo.deleteById(id);
+    }
 }

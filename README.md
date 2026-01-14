@@ -17,13 +17,13 @@ Präsentation: 19.01
 geplante/Idee für Use Cases:
 - Benutzerregistrierung und -anmeldung -> über okta siehe frontend von wider oder über hashcode/hashmap o.ä
 - # Eintrag erstellen 
-- Eintrag bearbeiten 
+- # Eintrag bearbeiten 
 - Freundebuch-Einträge filtern nach bestimmten Kategorien  
 - nach bestimmten Freunden suchen über Namen
 - Favoriten markieren + in einer eigenen Ansicht anzeigen lassen
 - light/ dark mode 
 - Eintragsdesign ändern (theming)
-- Einträge löschen (nur für den host/main user)
+- # Einträge löschen
 - ( kommende Gebursttage im Kalender anzeigen lassen (Google Calendar Api o.ä.))
 
 Ideen für Funktionen für Zusatzpunkte:
@@ -33,6 +33,7 @@ Ideen für Funktionen für Zusatzpunkte:
 - 
   Coole zuätzliche Funktionen:
 - crusor effect
+- beim eintrag ein feld haben bei dem man zwischen verschiedenen bildern aussuchen kann, welches am besten zu einem passt
 
 # authorisierung : man kann nur seinen eigenen eintrag bearbeiten, nur der host/ main user kann einträge löschen, 
 # jeder kann erstellen, nach einträgen filtern, geburtstage im kalender anzeigen lassen und fav markieren

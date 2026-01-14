@@ -36,6 +36,11 @@ public class SeiteController {
         return service.update(id, seite);
     }
 
+    @DeleteMapping("/seite/{id}")
+    public void deleteSeite(@PathVariable Long id) {
+        service.delete(id);
+    }
+
     // Ein einziges Test-Endpoint reicht:
     @GetMapping("/test")
     public Seite createTestSeite() {
