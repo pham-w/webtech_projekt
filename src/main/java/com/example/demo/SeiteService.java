@@ -24,7 +24,7 @@ public class SeiteService {
 
     public List<Seite> getAllForUser(Long userId) {
         return repo.findByUserId(userId);
-    }
+    }//
 
     public Seite update(Long id, Seite updated, Long userId) {
         Seite existing = get(id);
