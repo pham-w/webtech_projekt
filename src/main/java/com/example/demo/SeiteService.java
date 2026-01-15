@@ -3,9 +3,8 @@ package com.example.demo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-
+import org.springframework.http.HttpStatus;
 import java.util.List;
-
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Service
@@ -23,12 +22,16 @@ public class SeiteService {
                 .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Seite not found: " + id));
     }
 
-    public List<Seite> getAll() {
-        return (List<Seite>) repo.findAll();
+    public List<Seite> getAllForUser(Long userId) {
+        return repo.findByUserId(userId);
     }
 
-    public Seite update(Long id, Seite updated) {
-        Seite existing = repo.findById(id).orElseThrow(RuntimeException::new);
+    public Seite update(Long id, Seite updated, Long userId) {
+        Seite existing = get(id);
+
+        if (!userId.equals(existing.getUserId())) {
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Kein Zugriff");
+        }
 
         existing.setName(updated.getName());
         existing.setAge(updated.getAge());
@@ -38,9 +41,17 @@ public class SeiteService {
         existing.setFavFood(updated.getFavFood());
         existing.setDreamJob(updated.getDreamJob());
 
+        // userId nicht ändern lassen!
         return repo.save(existing);
     }
-    public void delete(Long id) {
+
+    public void delete(Long id, Long userId) {
+        Seite existing = get(id);
+
+        if (!userId.equals(existing.getUserId())) {
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Kein Zugriff");
+        }
+
         repo.deleteById(id);
     }
 }

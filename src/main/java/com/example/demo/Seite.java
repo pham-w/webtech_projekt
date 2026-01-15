@@ -12,6 +12,9 @@ public class Seite {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private Long userId; // <--- NEU
+
     private String name;
     private int age;
     private LocalDate geburtsdatum;
@@ -20,7 +23,11 @@ public class Seite {
     private String favFood;
     private String dreamJob;
 
-    // leerer Konstruktor für Hibernate
+    public Long getUserId() { return userId; }
+    public void setUserId(Long userId) { this.userId = userId; }
+
+
+
     public Seite() {}
 
     public Seite(String name, int age, LocalDate geburtsdatum,
