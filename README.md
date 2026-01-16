@@ -15,10 +15,10 @@ Präsentation: 19.01
 - eine ausfürlichere readme datei 
 
 geplante/Idee für Use Cases:
-- Benutzerregistrierung und -anmeldung -> über okta siehe frontend von wider oder über hashcode/hashmap o.ä
+- # Benutzerregistrierung und -anmeldung -> über okta siehe frontend von wider oder über hashcode/hashmap o.ä
 - # Eintrag erstellen 
 - # Eintrag bearbeiten 
-- Freundebuch-Einträge filtern nach bestimmten Kategorien  
+- # Freundebuch-Einträge filtern nach bestimmten Kategorien  
 - nach bestimmten Freunden suchen über Namen
 - Favoriten markieren + in einer eigenen Ansicht anzeigen lassen
 - light/ dark mode 
@@ -26,7 +26,7 @@ geplante/Idee für Use Cases:
 - # Einträge löschen
 
 Ideen für Funktionen für Zusatzpunkte:
-- Input Validierung (Geburtstag und Alter passen zsm ect.)
+- # Input Validierung (Geburtstag und Alter passen zsm ect.)
 - Multi User (idee zur authorisierung: nur ein main user/ host kann einträge löschen; user können nur ihre eigenen einträge bearbeiten)
 - externe Api (z.B Kalender Api für Geburtstage)
 
