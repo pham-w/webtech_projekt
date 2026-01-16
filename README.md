@@ -24,13 +24,12 @@ geplante/Idee für Use Cases:
 - light/ dark mode 
 - Eintragsdesign ändern (theming)
 - # Einträge löschen
-- ( kommende Gebursttage im Kalender anzeigen lassen (Google Calendar Api o.ä.))
 
 Ideen für Funktionen für Zusatzpunkte:
 - Input Validierung (Geburtstag und Alter passen zsm ect.)
 - Multi User (idee zur authorisierung: nur ein main user/ host kann einträge löschen; user können nur ihre eigenen einträge bearbeiten)
 - externe Api (z.B Kalender Api für Geburtstage)
-- 
+
   Coole zuätzliche Funktionen:
 - crusor effect
 - beim eintrag ein feld haben bei dem man zwischen verschiedenen bildern aussuchen kann, welches am besten zu einem passt
