@@ -40,7 +40,6 @@ public class SeiteService {
         existing.setFavFood(updated.getFavFood());
         existing.setDreamJob(updated.getDreamJob());
 
-        // userId nicht ändern lassen!
         return repo.save(existing);
     }
 
