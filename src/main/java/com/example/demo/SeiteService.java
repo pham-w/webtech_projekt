@@ -34,7 +34,6 @@ public class SeiteService {
         }
 
         existing.setName(updated.getName());
-        existing.setAge(updated.getAge());
         existing.setGeburtsdatum(updated.getGeburtsdatum());
         existing.setFavColor(updated.getFavColor());
         existing.setHobby(updated.getHobby());

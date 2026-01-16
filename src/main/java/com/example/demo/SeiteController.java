@@ -52,7 +52,6 @@ public class SeiteController {
     public Seite createTestSeite() {
         Seite s = new Seite(
                 "Angi",
-                19,
                 LocalDate.of(2005, 1, 1),
                 "Blau",
                 "Karate",
