@@ -8,10 +8,11 @@ import java.util.List;
 import java.time.LocalDate;
 
 @CrossOrigin(
-        origins = "https://frontend-freundebuch.onrender.com",
-        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS},
-        allowedHeaders = "*"
+        origins = { "http://localhost:5173", "https://frontend-freundebuch.onrender.com" },
+        allowedHeaders = "*",
+        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS}
 )
+
 @RestController
 public class SeiteController {
 

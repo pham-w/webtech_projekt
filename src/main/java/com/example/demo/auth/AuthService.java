@@ -4,6 +4,8 @@ import com.example.demo.user.User;
 import com.example.demo.user.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class AuthService {
@@ -17,12 +19,14 @@ public class AuthService {
     }
 
     public void register(String email, String password, String name) {
-        if (userRepository.existsByEmail(email)) {
-            throw new RuntimeException("User already exists");
+        String norm = email.toLowerCase().trim();
+
+        if (userRepository.existsByEmail(norm)) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "User already exists");
         }
 
         User user = new User();
-        user.setEmail(email.toLowerCase().trim());
+        user.setEmail(norm);
         user.setPasswordHash(encoder.encode(password));
         user.setName(name);
 
@@ -30,11 +34,13 @@ public class AuthService {
     }
 
     public User login(String email, String password) {
-        User user = userRepository.findByEmail(email.toLowerCase().trim())
-                .orElseThrow(() -> new RuntimeException("Invalid login"));
+        String norm = email.toLowerCase().trim();
+
+        User user = userRepository.findByEmail(norm)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid login"));
 
         if (!encoder.matches(password, user.getPasswordHash())) {
-            throw new RuntimeException("Invalid login");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid login");
         }
 
         return user;
