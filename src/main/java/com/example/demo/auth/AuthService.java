@@ -22,7 +22,7 @@ public class AuthService {
         String norm = email.toLowerCase().trim();
 
         if (userRepository.existsByEmail(norm)) {
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "User already exists");
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "User existiert schon");
         }
 
         User user = new User();
@@ -37,10 +37,10 @@ public class AuthService {
         String norm = email.toLowerCase().trim();
 
         User user = userRepository.findByEmail(norm)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid login"));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "E-Mail oder Passwort ist falsch"));
 
         if (!encoder.matches(password, user.getPasswordHash())) {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid login");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "E-Mail oder Passwort ist falsch");
         }
 
         return user;
