@@ -19,14 +19,14 @@ geplante/Idee für Use Cases:
 - # Eintrag erstellen 
 - # Eintrag bearbeiten 
 - # Freundebuch-Einträge filtern nach bestimmten Kategorien  
-- nach bestimmten Freunden suchen über Namen
+- # nach bestimmten Freunden suchen über Namen
 - Favoriten markieren + in einer eigenen Ansicht anzeigen lassen
 - light/ dark mode 
 - Eintragsdesign ändern (theming)
 - # Einträge löschen
 
 Ideen für Funktionen für Zusatzpunkte:
-- # Input Validierung (Geburtstag und Alter passen zsm ect.)
+- Input Validierung (Geburtstag und Alter passen zsm ect.)
 - Multi User (idee zur authorisierung: nur ein main user/ host kann einträge löschen; user können nur ihre eigenen einträge bearbeiten)
 - externe Api (z.B Kalender Api für Geburtstage)
 
