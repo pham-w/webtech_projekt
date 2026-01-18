@@ -12,14 +12,9 @@ public class Seite {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private Long userId;
 
     private String name;
-
-    // ❌ age wird NICHT gespeichert
-    // private int age;
-
     private LocalDate geburtsdatum;
     private String favColor;
     private String hobby;

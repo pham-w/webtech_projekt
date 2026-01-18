@@ -24,6 +24,7 @@ geplante/Idee für Use Cases:
 - light/ dark mode 
 - Eintragsdesign ändern (theming)
 - # Einträge löschen
+- benutzer können durch den logo home button zur hauptseite zurückgelangen
 
 Ideen für Funktionen für Zusatzpunkte:
 - Input Validierung (Geburtstag und Alter passen zsm ect.)
