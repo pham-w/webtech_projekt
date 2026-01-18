@@ -20,11 +20,10 @@ geplante/Idee für Use Cases:
 - # Eintrag bearbeiten 
 - # Freundebuch-Einträge filtern nach bestimmten Kategorien  
 - # nach bestimmten Freunden suchen über Namen
-- Favoriten markieren + in einer eigenen Ansicht anzeigen lassen
-- light/ dark mode 
+- # Favoriten markieren + in einer eigenen Ansicht anzeigen lassen
 - Eintragsdesign ändern (theming)
 - # Einträge löschen
-- benutzer können durch den logo home button zur hauptseite zurückgelangen
+- # Benutzer können durch den logo home button zur hauptseite zurückgelangen
 
 Ideen für Funktionen für Zusatzpunkte:
 - Input Validierung (Geburtstag und Alter passen zsm ect.)

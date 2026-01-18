@@ -1,3 +1,4 @@
+// ...existing code...
 package com.example.demo;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -56,4 +57,20 @@ class SeiteControllerTest {
                 .andExpect(jsonPath("$[0].name").value("Anna"))
                 .andExpect(jsonPath("$[1].favFood").value("Nudeln"));
     }
+
+    @Test
+    @DisplayName("GET /seite/{id} liefert die korrekte Seite")
+    void shouldReturnSingleSeiteById() throws Exception {
+        Seite s = new Seite("Clara", LocalDate.parse("2008-06-15"), "grün", "schwimmen", "Eis", "Ärztin");
+        s.setId(10L);
+        s.setUserId(3L);
+
+        when(seiteService.get(10L)).thenReturn(s);
+
+        mockMvc.perform(get("/seite/10"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.name").value("Clara"))
+                .andExpect(jsonPath("$.userId").value(3));
+    }
 }
+
