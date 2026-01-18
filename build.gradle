@@ -23,15 +23,19 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-security'
 
+    runtimeOnly 'com.h2database:h2'
+
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'com.h2database:h2:1.4.200'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
     runtimeOnly 'org.postgresql:postgresql'
 
 }
-
 
 tasks.named('test') {
 	useJUnitPlatform()

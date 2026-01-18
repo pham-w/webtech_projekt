@@ -54,6 +54,6 @@ class SeiteControllerTest {
         mockMvc.perform(get("/seite?userId=5"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].name").value("Anna"))
-                .andExpect(jsonPath("$[1].favFood").value("Pasta"));
+                .andExpect(jsonPath("$[1].favFood").value("Nudeln"));
     }
 }
